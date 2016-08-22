@@ -1,18 +1,16 @@
+var body=document.querySelector('body');
+var mouse = false;
 
-function global(){
-  body=document.querySelector('body');
-  container=document.createElement('div');
-  container2=document.createElement('div');
-  currentcolor='white';
+function gridcreate () {
+  var container=document.createElement('div');
+  var container2=document.createElement('div');
+  var currentcolor='white';
   body.style.backgroundColor=currentcolor;
   container.className='container';
   container2.id='container2';
   container2.className='container';
   body.appendChild(container);
   body.appendChild(container2);
-}
-
-function gridcreate () {
   for (let i=0; i < 40 ; i++) {
     var row=document.createElement('div');
     row.className='row';
@@ -45,11 +43,7 @@ function gridcreate () {
   clearbutt.addEventListener('click', colorchange);
   container2.appendChild(clearbutt);
 }
-
-global();
 gridcreate();
-
-var mouse = false;
 
 function clickevent(event) {
   event.target.style.backgroundColor=currentcolor;
@@ -60,7 +54,6 @@ function colorchange (event) {
   if (event.target.textContent==='CLEAR') {
     // console.log('cleared');
     document.body.innerHTML='';
-    global();
     gridcreate();
   }
   currentcolor=event.target.style.backgroundColor;
