@@ -12,12 +12,12 @@ function gridcreate () {
   body.appendChild(container);
   body.appendChild(container2);
   for (let i=0; i < 40 ; i++) {
-    var row=document.createElement('div');
+    let row=document.createElement('div');
     row.className='row';
     row.style.backgroundColor='white';
     // row.style.border='1px solid black';
     for (let i2=0; i2 < 40; i2++) {
-      var box=document.createElement('div');
+      let box=document.createElement('div');
       box.className='box';
       // box.id=i.toString()+i2.toString();
       box.addEventListener('click', clickevent);
@@ -30,19 +30,20 @@ function gridcreate () {
     container.appendChild(row);
   }
   for (let i = 0; i < 10; i++) {
-    var colors=document.createElement('div');
-    var color=['red', 'green', 'black', 'blue', 'goldenrod', 'grey', 'pink', 'orange', 'limegreen', 'white'];
+    let colors=document.createElement('div');
+    let color=['red', 'green', 'black', 'blue', 'goldenrod', 'grey', 'pink', 'orange', 'limegreen', 'white'];
     colors.className='colors';
     colors.style.backgroundColor=color[i];
     colors.addEventListener('click', colorchange);
     container2.appendChild(colors);
   }
-  var clearbutt=document.createElement('button');
+  let clearbutt=document.createElement('button');
   clearbutt.textContent='CLEAR';
   clearbutt.id='clear';
   clearbutt.addEventListener('click', colorchange);
   container2.appendChild(clearbutt);
 }
+
 gridcreate();
 
 function clickevent(event) {
