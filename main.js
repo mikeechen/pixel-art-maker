@@ -1,3 +1,4 @@
+
 var body=document.querySelector('body');
 var mouse = false;
 
