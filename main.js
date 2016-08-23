@@ -73,7 +73,7 @@ function mouseup() {
 }
 
 function mouseover(event) {
-  if (mouse===true){
+  if (mouse === true){
     event.target.style.backgroundColor=currentcolor;
     event.target.style.border='1px solid' + currentcolor;
   }
