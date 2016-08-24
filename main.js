@@ -49,7 +49,7 @@ gridcreate();
 
 function clickevent(event) {
   event.target.style.backgroundColor=currentcolor;
-  event.target.style.border='1px solid' + currentcolor;
+  event.target.style.border='1px solid ' + currentcolor;
 }
 
 function colorchange (event) {
@@ -65,7 +65,7 @@ function colorchange (event) {
 function mousedown(event) {
   mouse = true;
   event.target.style.backgroundColor=currentcolor;
-  event.target.style.border='1px solid' + currentcolor;
+  event.target.style.border='1px solid ' + currentcolor;
 }
 
 function mouseup() {
@@ -75,6 +75,6 @@ function mouseup() {
 function mouseover(event) {
   if (mouse === true){
     event.target.style.backgroundColor=currentcolor;
-    event.target.style.border='1px solid' + currentcolor;
+    event.target.style.border='1px solid ' + currentcolor;
   }
 }
